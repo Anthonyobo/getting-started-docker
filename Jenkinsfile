@@ -1,5 +1,5 @@
 pipeline {
-  agent { label "linux" }
+  agent any
   stages {
     stage("build") {
       steps {
@@ -16,4 +16,16 @@ pipeline {
       }
     }
   }
+    // stage('Push') {
+      // steps {
+        // script{
+          // docker.withRegistry('https://922786934247.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws-credentials') {
+            // app.push("${env.BUILD_NUMBER}")
+            // app.push("latest")
+            // }
+          // }
+        // }
+      // }
+    // }
+  // }
 }
