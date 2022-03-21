@@ -7,7 +7,7 @@ pipeline {
           // systemctl start docker
         // """
       // }
-    }
+    // }
     stage("build") {
       steps {
         sh """
