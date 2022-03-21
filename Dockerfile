@@ -1,4 +1,9 @@
 FROM python:3.7-alpine
+USER root
+RUN apt-get update &&
+apt-get -y install docker-ce &&
+apt-get -y install sudo
+
 VOLUME /var/run/docker.sock:/var/run/docker.sock
 RUN adduser jenkins sudo
 RUN echo “jenkins ALL=NOPASSWD: ALL” >> /etc/sudoers
