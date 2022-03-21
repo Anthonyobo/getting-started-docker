@@ -4,7 +4,7 @@ pipeline {
     stage("start docker") {
       steps {
         sh """
-          service docker start
+          sudo systemctl start docker
         """
       }
     }
