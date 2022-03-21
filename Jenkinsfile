@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  // stages {
+  stages {
     // stage("start docker") {
       // steps {
         // sh """
