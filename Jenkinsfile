@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    // stage("start docker") {
-      // steps {
-        // sh """
-          // systemctl start docker
-        // """
-      // }
-    // }
+    stage("start docker") {
+      steps {
+        sh """
+          systemctl start docker
+        """
+      }
+    }
     stage("build") {
       steps {
         sh """
