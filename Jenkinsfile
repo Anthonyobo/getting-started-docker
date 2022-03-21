@@ -4,7 +4,7 @@ pipeline {
     stage("start docker") {
       steps {
         sh """
-          sudo service docker start
+          service docker start
         """
       }
     }
